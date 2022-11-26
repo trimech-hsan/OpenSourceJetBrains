@@ -21,9 +21,9 @@ class AppCoordinator:Coordinator{
     var childrens: [Coordinator]  = []
     var navigationController: UINavigationController
     
- 
+    
     let storyboard  = UIStoryboard.init(name: "Main", bundle: nil)
-
+    
     init(navCon:UINavigationController) {
         self.navigationController = navCon
     }
@@ -39,6 +39,20 @@ class AppCoordinator:Coordinator{
         // Instantiate projetcsViewModel
         let projetcsViewModel = ProjectsViewModel(model: ProjectsModel())
         projectsVC.viewModel = projetcsViewModel
+        //set coordinator delegate
+        projectsVC.coordinatorDelagate  = self
         navigationController.pushViewController(projectsVC, animated: true)
     }
 }
+extension AppCoordinator: ProjectsCoordinatorDelegate {
+    
+    func goToProjectDetailPage(project:ProjectObject) {
+        let detailsProjectViewModel = DetailsProjectViewModel.init(model:DetailsProjectModel.init(project: project))
+        let DetailsProjectVC: DetailsProjectViewController = storyboard.instantiate()
+        DetailsProjectVC.viewModel = detailsProjectViewModel
+        // Set the Coordinator to the ViewModel
+        navigationController.pushViewController(DetailsProjectVC, animated: true)
+        
+    }
+}
+

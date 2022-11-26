@@ -14,8 +14,7 @@ struct ProjectObject: Decodable {
     var openIssues : Int?
     var watchers : Int?
     var description : String?
-
-
+    
     enum CodingKeys: String, CodingKey {
         
         case fullName = "full_name"
@@ -23,6 +22,6 @@ struct ProjectObject: Decodable {
         case openIssues = "open_issues"
         case watchers = "watchers"
         case description = "description"
-
+        
     }
 }

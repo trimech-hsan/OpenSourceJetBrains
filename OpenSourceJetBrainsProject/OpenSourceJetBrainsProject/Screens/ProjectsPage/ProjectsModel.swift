@@ -9,7 +9,7 @@ import Foundation
 
 class ProjectsModel {
     var projectsService: projectsServiceInterface
-
+    
     init(projectsService: projectsServiceInterface = ProjectsService()){
         self.projectsService = projectsService
     }
@@ -18,7 +18,7 @@ class ProjectsModel {
         do {
             // await : attendre la reponse de la fonction asynchrone
             //  c'est le point de suspension
-           return try await projectsService.fetchProjects(page: page)
+            return try await projectsService.fetchProjects(page: page)
         } catch {
             return nil
         }

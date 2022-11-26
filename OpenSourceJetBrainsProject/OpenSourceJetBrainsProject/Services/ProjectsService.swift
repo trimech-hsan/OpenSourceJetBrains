@@ -12,7 +12,6 @@ import Alamofire
 
 protocol projectsServiceInterface {
     func fetchProjects(page: Int) async throws -> [ProjectObject]?
-    
 }
 
 class ProjectsService: projectsServiceInterface {
@@ -25,21 +24,21 @@ class ProjectsService: projectsServiceInterface {
             
             return try await withCheckedThrowingContinuation() { continuation in
                 request.sendRequest { result, error in
-            // en cas d'erreur
+                    // en cas d'erreur
                     if let error = error {
                         continuation.resume(throwing: error)
                         return
                     }
-           // en cas de reponse
-    
+                    // en cas de reponse
+                    
                     do {
-           // le decodage de resulat
+                        // le decodage de resulat
                         if let data = result {
                             let projects = try JSONDecoder().decode([ProjectObject].self, from: data)
                             continuation.resume(returning: projects)
                         }
                     } catch {
-           // erreur de  decodage
+                        // erreur de  decodage
                         continuation.resume(throwing: error)
                     }
                 }

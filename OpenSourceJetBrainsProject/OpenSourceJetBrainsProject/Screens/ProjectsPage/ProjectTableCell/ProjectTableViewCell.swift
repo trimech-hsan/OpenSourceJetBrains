@@ -8,7 +8,7 @@
 import UIKit
 
 final class ProjectTableViewCell: UITableViewCell,Nibable {
-
+    
     @IBOutlet weak var watchersLabel: UILabel!
     @IBOutlet weak var openIssuesLabel: UILabel!
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -17,11 +17,9 @@ final class ProjectTableViewCell: UITableViewCell,Nibable {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setupUI(project: ProjectObject) {

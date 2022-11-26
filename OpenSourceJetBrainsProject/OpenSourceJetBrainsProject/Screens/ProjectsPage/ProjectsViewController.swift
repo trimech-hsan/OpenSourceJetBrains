@@ -7,12 +7,16 @@
 
 import UIKit
 
+protocol ProjectsCoordinatorDelegate: AnyObject {
+    func goToProjectDetailPage(project:ProjectObject)
+}
 class ProjectsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     private let refreshControl = UIRefreshControl()
     
     var viewModel: ProjectsViewModel?
+    weak var coordinatorDelagate:  ProjectsCoordinatorDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +34,7 @@ class ProjectsViewController: UIViewController {
             try await viewModel?.fetchProjects()
             refreshControl.endRefreshing()
             tableView.reloadData()
-        }
-        catch{
+        }catch{
         }
     }
     func setupUI() {
@@ -73,6 +76,13 @@ extension ProjectsViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let project = viewModel?.getProjects(atIndex: indexPath.row) else {
+            return
+        }
+        coordinatorDelagate?.goToProjectDetailPage(project: project)
     }
     
 }
