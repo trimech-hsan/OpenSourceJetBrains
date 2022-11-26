@@ -24,6 +24,10 @@
 		7B09E4A929326DD8007ADA2D /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E4A729326DD8007ADA2D /* ProjectTableViewCell.swift */; };
 		7B09E4AA29326DD8007ADA2D /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B09E4A829326DD8007ADA2D /* ProjectTableViewCell.xib */; };
 		7B09E4AD2932734E007ADA2D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B09E4AC2932734E007ADA2D /* Alamofire */; };
+		7B09E4AF2932742C007ADA2D /* ProjectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E4AE2932742C007ADA2D /* ProjectsService.swift */; };
+		7B09E4B12932747F007ADA2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E4B02932747F007ADA2D /* Constants.swift */; };
+		7B09E4B3293274C1007ADA2D /* AppRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E4B2293274C1007ADA2D /* AppRequest.swift */; };
+		7B09E4B529327519007ADA2D /* ProjectObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E4B429327519007ADA2D /* ProjectObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		7B09E4A429326C66007ADA2D /* ProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsModel.swift; sourceTree = "<group>"; };
 		7B09E4A729326DD8007ADA2D /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		7B09E4A829326DD8007ADA2D /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
+		7B09E4AE2932742C007ADA2D /* ProjectsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsService.swift; sourceTree = "<group>"; };
+		7B09E4B02932747F007ADA2D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7B09E4B2293274C1007ADA2D /* AppRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRequest.swift; sourceTree = "<group>"; };
+		7B09E4B429327519007ADA2D /* ProjectObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +167,7 @@
 		7B09E49129326673007ADA2D /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				7B09E4B02932747F007ADA2D /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -191,6 +200,8 @@
 		7B09E4952932669C007ADA2D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7B09E4AE2932742C007ADA2D /* ProjectsService.swift */,
+				7B09E4B2293274C1007ADA2D /* AppRequest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 		7B09E496293266A4007ADA2D /* Bussiness */ = {
 			isa = PBXGroup;
 			children = (
+				7B09E4B429327519007ADA2D /* ProjectObject.swift */,
 			);
 			path = Bussiness;
 			sourceTree = "<group>";
@@ -361,11 +373,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B09E4A1293268BE007ADA2D /* AppCoordinator.swift in Sources */,
+				7B09E4B3293274C1007ADA2D /* AppRequest.swift in Sources */,
+				7B09E4B12932747F007ADA2D /* Constants.swift in Sources */,
+				7B09E4AF2932742C007ADA2D /* ProjectsService.swift in Sources */,
 				7B09E4A929326DD8007ADA2D /* ProjectTableViewCell.swift in Sources */,
 				7B09E4A529326C66007ADA2D /* ProjectsModel.swift in Sources */,
 				7B09E49A29326757007ADA2D /* UITableViewExtension.swift in Sources */,
 				7B09E4A329326C5A007ADA2D /* ProjectsViewModel.swift in Sources */,
 				7B09E49F29326800007ADA2D /* ProjectsViewController.swift in Sources */,
+				7B09E4B529327519007ADA2D /* ProjectObject.swift in Sources */,
 				7B09E49829326725007ADA2D /* Niblable.swift in Sources */,
 				7B09E49C29326779007ADA2D /* UIStroyboardExtension.swift in Sources */,
 				7B09E46129326400007ADA2D /* AppDelegate.swift in Sources */,
