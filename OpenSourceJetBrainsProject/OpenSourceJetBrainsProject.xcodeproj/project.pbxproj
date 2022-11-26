@@ -14,6 +14,9 @@
 		7B09E47829326402007ADA2D /* OpenSourceJetBrainsProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E47729326402007ADA2D /* OpenSourceJetBrainsProjectTests.swift */; };
 		7B09E48229326402007ADA2D /* OpenSourceJetBrainsProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E48129326402007ADA2D /* OpenSourceJetBrainsProjectUITests.swift */; };
 		7B09E48429326402007ADA2D /* OpenSourceJetBrainsProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E48329326402007ADA2D /* OpenSourceJetBrainsProjectUITestsLaunchTests.swift */; };
+		7B09E49829326725007ADA2D /* Niblable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E49729326725007ADA2D /* Niblable.swift */; };
+		7B09E49A29326757007ADA2D /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E49929326757007ADA2D /* UITableViewExtension.swift */; };
+		7B09E49C29326779007ADA2D /* UIStroyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E49B29326779007ADA2D /* UIStroyboardExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		7B09E47D29326402007ADA2D /* OpenSourceJetBrainsProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenSourceJetBrainsProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B09E48129326402007ADA2D /* OpenSourceJetBrainsProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceJetBrainsProjectUITests.swift; sourceTree = "<group>"; };
 		7B09E48329326402007ADA2D /* OpenSourceJetBrainsProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceJetBrainsProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B09E49729326725007ADA2D /* Niblable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Niblable.swift; sourceTree = "<group>"; };
+		7B09E49929326757007ADA2D /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		7B09E49B29326779007ADA2D /* UIStroyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroyboardExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,9 @@
 		7B09E4922932667D007ADA2D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7B09E49729326725007ADA2D /* Niblable.swift */,
+				7B09E49929326757007ADA2D /* UITableViewExtension.swift */,
+				7B09E49B29326779007ADA2D /* UIStroyboardExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,6 +317,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B09E49A29326757007ADA2D /* UITableViewExtension.swift in Sources */,
+				7B09E49829326725007ADA2D /* Niblable.swift in Sources */,
+				7B09E49C29326779007ADA2D /* UIStroyboardExtension.swift in Sources */,
 				7B09E46129326400007ADA2D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
