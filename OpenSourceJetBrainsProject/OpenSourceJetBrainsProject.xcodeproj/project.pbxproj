@@ -17,6 +17,12 @@
 		7B09E49829326725007ADA2D /* Niblable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E49729326725007ADA2D /* Niblable.swift */; };
 		7B09E49A29326757007ADA2D /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E49929326757007ADA2D /* UITableViewExtension.swift */; };
 		7B09E49C29326779007ADA2D /* UIStroyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E49B29326779007ADA2D /* UIStroyboardExtension.swift */; };
+		7B09E49F29326800007ADA2D /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E49E29326800007ADA2D /* ProjectsViewController.swift */; };
+		7B09E4A1293268BE007ADA2D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E4A0293268BE007ADA2D /* AppCoordinator.swift */; };
+		7B09E4A329326C5A007ADA2D /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E4A229326C5A007ADA2D /* ProjectsViewModel.swift */; };
+		7B09E4A529326C66007ADA2D /* ProjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E4A429326C66007ADA2D /* ProjectsModel.swift */; };
+		7B09E4A929326DD8007ADA2D /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09E4A729326DD8007ADA2D /* ProjectTableViewCell.swift */; };
+		7B09E4AA29326DD8007ADA2D /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B09E4A829326DD8007ADA2D /* ProjectTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		7B09E49729326725007ADA2D /* Niblable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Niblable.swift; sourceTree = "<group>"; };
 		7B09E49929326757007ADA2D /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		7B09E49B29326779007ADA2D /* UIStroyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroyboardExtension.swift; sourceTree = "<group>"; };
+		7B09E49E29326800007ADA2D /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		7B09E4A0293268BE007ADA2D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7B09E4A229326C5A007ADA2D /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
+		7B09E4A429326C66007ADA2D /* ProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsModel.swift; sourceTree = "<group>"; };
+		7B09E4A729326DD8007ADA2D /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		7B09E4A829326DD8007ADA2D /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,7 @@
 		7B09E49029326646007ADA2D /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				7B09E4A0293268BE007ADA2D /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -168,6 +181,7 @@
 		7B09E49429326694007ADA2D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7B09E49D293267DD007ADA2D /* ProjectsPage */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -184,6 +198,26 @@
 			children = (
 			);
 			path = Bussiness;
+			sourceTree = "<group>";
+		};
+		7B09E49D293267DD007ADA2D /* ProjectsPage */ = {
+			isa = PBXGroup;
+			children = (
+				7B09E4A629326DB3007ADA2D /* ProjectTableCell */,
+				7B09E49E29326800007ADA2D /* ProjectsViewController.swift */,
+				7B09E4A229326C5A007ADA2D /* ProjectsViewModel.swift */,
+				7B09E4A429326C66007ADA2D /* ProjectsModel.swift */,
+			);
+			path = ProjectsPage;
+			sourceTree = "<group>";
+		};
+		7B09E4A629326DB3007ADA2D /* ProjectTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B09E4A729326DD8007ADA2D /* ProjectTableViewCell.swift */,
+				7B09E4A829326DD8007ADA2D /* ProjectTableViewCell.xib */,
+			);
+			path = ProjectTableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +327,7 @@
 				7B09E46D29326402007ADA2D /* LaunchScreen.storyboard in Resources */,
 				7B09E46A29326402007ADA2D /* Assets.xcassets in Resources */,
 				7B09E46829326400007ADA2D /* Main.storyboard in Resources */,
+				7B09E4AA29326DD8007ADA2D /* ProjectTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B09E4A1293268BE007ADA2D /* AppCoordinator.swift in Sources */,
+				7B09E4A929326DD8007ADA2D /* ProjectTableViewCell.swift in Sources */,
+				7B09E4A529326C66007ADA2D /* ProjectsModel.swift in Sources */,
 				7B09E49A29326757007ADA2D /* UITableViewExtension.swift in Sources */,
+				7B09E4A329326C5A007ADA2D /* ProjectsViewModel.swift in Sources */,
+				7B09E49F29326800007ADA2D /* ProjectsViewController.swift in Sources */,
 				7B09E49829326725007ADA2D /* Niblable.swift in Sources */,
 				7B09E49C29326779007ADA2D /* UIStroyboardExtension.swift in Sources */,
 				7B09E46129326400007ADA2D /* AppDelegate.swift in Sources */,
