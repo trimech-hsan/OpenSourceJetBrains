@@ -95,6 +95,13 @@
 		7B09E45F29326400007ADA2D /* OpenSourceJetBrainsProject */ = {
 			isa = PBXGroup;
 			children = (
+				7B09E496293266A4007ADA2D /* Bussiness */,
+				7B09E4952932669C007ADA2D /* Services */,
+				7B09E49429326694007ADA2D /* Screens */,
+				7B09E4932932668D007ADA2D /* Managers */,
+				7B09E4922932667D007ADA2D /* Extensions */,
+				7B09E49129326673007ADA2D /* Constants */,
+				7B09E49029326646007ADA2D /* Coordinator */,
 				7B09E46029326400007ADA2D /* AppDelegate.swift */,
 				7B09E46629326400007ADA2D /* Main.storyboard */,
 				7B09E46929326402007ADA2D /* Assets.xcassets */,
@@ -119,6 +126,55 @@
 				7B09E48329326402007ADA2D /* OpenSourceJetBrainsProjectUITestsLaunchTests.swift */,
 			);
 			path = OpenSourceJetBrainsProjectUITests;
+			sourceTree = "<group>";
+		};
+		7B09E49029326646007ADA2D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7B09E49129326673007ADA2D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		7B09E4922932667D007ADA2D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7B09E4932932668D007ADA2D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7B09E49429326694007ADA2D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		7B09E4952932669C007ADA2D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7B09E496293266A4007ADA2D /* Bussiness */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bussiness;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
