@@ -24,4 +24,11 @@ final class ProjectTableViewCell: UITableViewCell,Nibable {
         // Configure the view for the selected state
     }
     
+    func setupUI(project: ProjectObject) {
+        self.fullNameLabel.text = "\( project.fullName ?? "No Name" )"
+        self.forksLabel.text = "\(project.forks ?? 0)"
+        self.openIssuesLabel.text = "\(project.openIssues ?? 0)"
+        self.watchersLabel.text = "\(project.watchers ?? 0)"
+    }
+    
 }

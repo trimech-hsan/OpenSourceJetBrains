@@ -23,24 +23,23 @@ class ProjectsViewModel {
         return "Open-source projects"
     }
     func getNumberOfRows() -> Int {
-        return allProjects.count()
+        return self.allProjects.count
     }
     
     func fetchProjects() async throws {
         
         do {
-            lastCount = self.allRepos.count
+            lastCount = self.allProjects.count
             let result = try await model.fetchProjects(page: page)
             if let sortedResult  = result{
                 self.allProjects.append(contentsOf: sortedResult)
             }
         } catch {
             print("Request failed with error: \(error)")
-            self.feedingError(error)
         }
     }
     // récuperer le Projects selectioné
-    func getProjects(atIndex: Int) -> Repo? {
+    func getProjects(atIndex: Int) -> ProjectObject? {
         
         if atIndex < allProjects.count {
             return allProjects[atIndex]
