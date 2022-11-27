@@ -10,11 +10,11 @@ import Alamofire
 
 
 
-protocol projectsServiceInterface {
+protocol ProjectsServiceInterface {
     func fetchProjects(page: Int) async throws -> [ProjectObject]?
 }
 
-class ProjectsService: projectsServiceInterface {
+class ProjectsService: ProjectsServiceInterface {
     // async : pour lancer une tache asychrone  sur une thread
     func fetchProjects(page: Int) async throws -> [ProjectObject]? {
         let url = String(format: "%@%@%ld", Constant.Service.baseUrl, Constant.Service.projectsPath, page)

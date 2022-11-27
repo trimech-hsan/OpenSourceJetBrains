@@ -8,9 +8,9 @@
 import Foundation
 
 class ProjectsModel {
-    var projectsService: projectsServiceInterface
+    var projectsService: ProjectsServiceInterface
     
-    init(projectsService: projectsServiceInterface = ProjectsService()){
+    init(projectsService: ProjectsServiceInterface = ProjectsService()){
         self.projectsService = projectsService
     }
     

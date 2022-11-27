@@ -13,6 +13,8 @@ protocol ProjectsCoordinatorDelegate: AnyObject {
 class ProjectsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     private let refreshControl = UIRefreshControl()
     
     var viewModel: ProjectsViewModel?
@@ -31,12 +33,21 @@ class ProjectsViewController: UIViewController {
     func fetchData() async {
         do{
             // attendre la  reponse de webservice fetchTeams
+            showLoader()
             try await viewModel?.fetchProjects()
             refreshControl.endRefreshing()
             tableView.reloadData()
-        }catch{
+            hideLoader()
+          
+        } catch {
+            hideLoader()
+            // Erreur generique parce que j'ai pas les codes des erreurs specifiques de l'api (j'ai pas trouvé une documentation ou swagger de l'api)
+            let alertController = UIAlertController(title: "Problème de connection", message: error.localizedDescription, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(alertController, animated: true, completion: nil)
         }
     }
+  
     func setupUI() {
         self.title = viewModel?.pageTitle
         // enregistrer un nib de cellule dans la tableview .
@@ -51,6 +62,15 @@ class ProjectsViewController: UIViewController {
         Task {
             await fetchData()
         }
+    }
+    private func showLoader() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
+    
+    private func hideLoader() {
+        activityIndicator.stopAnimating()
+        
     }
 }
 
